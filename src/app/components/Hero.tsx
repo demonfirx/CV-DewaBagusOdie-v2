@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { portfolioData } from "../data";
+import cvFile from "../../imports/ATS_CV_Dewa_Bagus_Odie_Ocxivian_IT_Support.pdf";
 
 const AnimatedTape = ({
   text,
@@ -142,7 +143,8 @@ export function Hero() {
               Contact Me
             </a>
             <a
-              href="#"
+              href={cvFile}
+              download="ATS_CV_Dewa_Bagus_Odie_Ocxivian_IT_Support.pdf"
               className="px-8 py-4 bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-widest hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-300"
             >
               Download CV
