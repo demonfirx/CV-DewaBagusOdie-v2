@@ -40,9 +40,9 @@ export function Hero() {
   const nameParts = personalInfo.name.split(" ");
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-24 md:pb-28">
       {/* Background Tapes - ODIE branding ribbons */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-[0.07] dark:opacity-[0.12] md:opacity-[0.15] md:dark:opacity-20">
+      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-[0.04] dark:opacity-[0.06]">
         <AnimatedTape
           text="ODIE"
           rotate={-15}
@@ -182,19 +182,24 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator - hidden on mobile to avoid overlap with CTAs */}
+      {/* Scroll indicator - positioned at very bottom, below everything */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.2, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center space-y-2 text-zinc-400 hidden md:flex"
+        transition={{ delay: 2.5, duration: 1 }}
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-1 text-zinc-500 z-20"
       >
-        <span className="text-xs font-bold tracking-widest uppercase">Scroll</span>
         <motion.div
-          animate={{ y: [0, 8, 0] }}
+          animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
-          className="w-px h-12 bg-gradient-to-b from-transparent via-zinc-400 to-transparent"
-        />
+          className="w-5 h-8 rounded-full border-2 border-zinc-500 flex items-start justify-center pt-1.5"
+        >
+          <motion.div
+            animate={{ opacity: [1, 0], y: [0, 8] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+            className="w-1 h-1.5 rounded-full bg-zinc-400"
+          />
+        </motion.div>
       </motion.div>
     </section>
   );
