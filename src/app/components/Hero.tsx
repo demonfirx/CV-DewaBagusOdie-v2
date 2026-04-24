@@ -42,7 +42,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Tapes - ODIE branding ribbons */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-20 dark:opacity-30">
+      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-[0.07] dark:opacity-[0.12] md:opacity-[0.15] md:dark:opacity-20">
         <AnimatedTape
           text="ODIE"
           rotate={-15}
@@ -73,25 +73,33 @@ export function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-8"
-        >
+        <div className="space-y-8">
           {/* Greeting */}
-          <span className="inline-block py-1 px-3 rounded-full bg-yellow-400/10 text-yellow-600 dark:text-yellow-400 text-sm font-bold tracking-widest uppercase border border-yellow-400/20 backdrop-blur-sm">
+          <motion.span
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-block py-1 px-3 rounded-full bg-yellow-400/10 text-yellow-600 dark:text-yellow-400 text-sm font-bold tracking-widest uppercase border border-yellow-400/20 backdrop-blur-sm"
+          >
             Hi, I'm
-          </span>
+          </motion.span>
 
           {/* Name - oversized display typography */}
           <h1 className="font-display font-black uppercase tracking-tighter leading-[0.85] text-6xl md:text-8xl lg:text-9xl">
             {/* First two words solid white */}
-            <span className="block text-black dark:text-white">
+            <motion.span
+              initial={{ opacity: 0, x: -60 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              className="block text-black dark:text-white"
+            >
               {nameParts[0]} {nameParts[1]}
-            </span>
+            </motion.span>
             {/* Last two words outlined orange */}
-            <span
+            <motion.span
+              initial={{ opacity: 0, x: 60 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
               className="block"
               style={{
                 color: 'transparent',
@@ -100,18 +108,28 @@ export function Hero() {
               }}
             >
               {nameParts[2]} {nameParts[3]}
-            </span>
+            </motion.span>
           </h1>
 
           {/* Role */}
-          <p className="text-yellow-400 font-display font-bold uppercase tracking-[0.2em] text-sm md:text-base">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-yellow-400 font-display font-bold uppercase tracking-[0.2em] text-sm md:text-base"
+          >
             {personalInfo.role}
-          </p>
+          </motion.p>
 
           {/* Headline */}
-          <p className="max-w-3xl mx-auto text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="max-w-3xl mx-auto text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed"
+          >
             {personalInfo.headline}
-          </p>
+          </motion.p>
 
           {/* Supporting Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-4">
@@ -120,37 +138,48 @@ export function Hero() {
               { value: "20+", label: "Completed Projects" },
               { value: "∞", label: "Cross-Functional Strength" },
               { value: "→", label: "Growing Focus on Digital Product" },
-            ].map((metric) => (
-              <div key={metric.label} className="text-center">
+            ].map((metric, i) => (
+              <motion.div
+                key={metric.label}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.2 + i * 0.15 }}
+                className="text-center"
+              >
                 <p className="font-display font-black text-3xl md:text-4xl text-yellow-400">{metric.value}</p>
                 <p className="text-xs md:text-sm text-zinc-500 dark:text-zinc-400 font-medium mt-1 leading-tight">{metric.label}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* CTAs */}
-          <div className="pt-8 flex flex-wrap justify-center gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.8 }}
+            className="pt-8 flex flex-wrap justify-center gap-4"
+          >
             <a
               href="#projects"
-              className="px-8 py-4 bg-yellow-400 text-black font-bold uppercase tracking-widest hover:bg-yellow-300 transition-all duration-300"
+              className="px-8 py-4 bg-yellow-400 text-black font-bold uppercase tracking-widest hover:bg-yellow-300 hover:scale-105 transition-all duration-300"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 border-2 border-black text-black dark:border-white dark:text-white font-bold uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+              className="px-8 py-4 border-2 border-black text-black dark:border-white dark:text-white font-bold uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black hover:scale-105 transition-all duration-300"
             >
               Contact Me
             </a>
             <a
               href={cvFile}
               download="ATS_CV_Dewa_Bagus_Odie_Ocxivian_IT_Support.pdf"
-              className="px-8 py-4 bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-widest hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-300"
+              className="px-8 py-4 bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-widest hover:bg-zinc-800 dark:hover:bg-zinc-200 hover:scale-105 transition-all duration-300"
             >
               Download CV
             </a>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}
