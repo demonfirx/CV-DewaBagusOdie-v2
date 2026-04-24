@@ -87,6 +87,14 @@ export const portfolioData = {
         image: "https://images.unsplash.com/photo-1581080247486-57989c1f14ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGFnZW5jeSUyMHdlYnNpdGUlMjB0eXBvZ3JhcGh5fGVufDF8fHx8MTc3NjMyMTMxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         tags: ["React", "TypeScript", "Tailwind"],
         link: "#",
+      },
+      {
+        id: 4,
+        title: "Pokemon Battle Game",
+        description: "Turn-based Pokemon battle with faithful mechanics — dual types, STAB, crits, status conditions, abilities, smart AI, per-type attack VFX, and Web Audio sound effects.",
+        image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+        tags: ["JavaScript", "Node.js", "Web Audio", "CSS VFX"],
+        link: "https://pokemon-battle-beta.vercel.app",
       }
     ]
   },
