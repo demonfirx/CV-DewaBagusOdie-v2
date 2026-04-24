@@ -66,6 +66,14 @@ export const portfolioData = {
     items: [
       {
         id: 1,
+        title: "Pokemon Battle Game",
+        description: "Turn-based Pokemon battle with faithful mechanics — dual types, STAB, crits, status conditions, abilities, smart AI, per-type attack VFX, and Web Audio sound effects.",
+        image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+        tags: ["JavaScript", "Node.js", "Web Audio", "CSS VFX"],
+        link: "https://pokemon-battle-beta.vercel.app",
+      },
+      {
+        id: 2,
         title: "Personal Portfolio Website",
         description: "A premium portfolio website with stronger visual system, responsive layout, and memorable user experience.",
         image: "https://images.unsplash.com/photo-1762716514229-739f6769e282?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwYm9sZCUyMHdlYiUyMGRlc2lnbnxlbnwxfHx8fDE3NzYzMjEzMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
@@ -73,7 +81,7 @@ export const portfolioData = {
         link: "https://dewabagusodiecv.vercel.app",
       },
       {
-        id: 2,
+        id: 3,
         title: "NEXUS Creative",
         description: "Creative agency landing page with dark mode, glassmorphism, bold typography, cinematic scroll animations, and responsive design.",
         image: "https://images.unsplash.com/photo-1720962158883-b0f2021fb51e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9kZSUyMGRhc2hib2FyZCUyMHVpfGVufDF8fHx8MTc3NjMyMTMxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
@@ -81,20 +89,12 @@ export const portfolioData = {
         link: "https://nexus-creative-odie.vercel.app",
       },
       {
-        id: 3,
+        id: 4,
         title: "PRISM UI",
         description: "Interactive UI component showcase — cards, buttons, data displays, animations, and mini dashboard built with React + TypeScript + Tailwind.",
         image: "https://images.unsplash.com/photo-1581080247486-57989c1f14ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGFnZW5jeSUyMHdlYnNpdGUlMjB0eXBvZ3JhcGh5fGVufDF8fHx8MTc3NjMyMTMxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         tags: ["React", "TypeScript", "Tailwind"],
         link: "https://prism-ui-odie.vercel.app",
-      },
-      {
-        id: 4,
-        title: "Pokemon Battle Game",
-        description: "Turn-based Pokemon battle with faithful mechanics — dual types, STAB, crits, status conditions, abilities, smart AI, per-type attack VFX, and Web Audio sound effects.",
-        image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
-        tags: ["JavaScript", "Node.js", "Web Audio", "CSS VFX"],
-        link: "https://pokemon-battle-beta.vercel.app",
       }
     ]
   },
