@@ -159,18 +159,18 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 1.8 }}
             className="pt-8 flex flex-wrap justify-center gap-4"
           >
-            <a
-              href="#projects"
-              className="px-8 py-4 bg-yellow-400 text-black font-bold uppercase tracking-widest hover:bg-yellow-300 hover:scale-105 transition-all duration-300"
+            <button
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-4 bg-yellow-400 text-black font-bold uppercase tracking-widest hover:bg-yellow-300 hover:scale-105 transition-all duration-300 cursor-pointer border-none"
             >
               View Projects
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 border-2 border-black text-black dark:border-white dark:text-white font-bold uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black hover:scale-105 transition-all duration-300"
+            </button>
+            <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-4 border-2 border-black text-black dark:border-white dark:text-white font-bold uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer"
             >
               Contact Me
-            </a>
+            </button>
             <a
               href={cvFile}
               download="ATS_CV_Dewa_Bagus_Odie_Ocxivian_IT_Support.pdf"

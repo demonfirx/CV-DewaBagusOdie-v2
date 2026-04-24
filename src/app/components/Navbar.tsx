@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { portfolioData } from "../data";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Certificates", href: "#certificates" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", target: "about" },
+  { name: "Experience", target: "experience" },
+  { name: "Skills", target: "skills" },
+  { name: "Projects", target: "projects" },
+  { name: "Certificates", target: "certificates" },
+  { name: "Contact", target: "contact" },
 ];
 
 export function Navbar() {
@@ -27,6 +27,17 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollTo = useCallback((target: string) => {
+    const el = document.getElementById(target);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -37,21 +48,21 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="text-2xl font-display font-black tracking-tighter">
+        <button onClick={scrollToTop} className="text-2xl font-display font-black tracking-tighter cursor-pointer bg-transparent border-none">
           {portfolioData.personalInfo.shortName}
           <span className="text-yellow-400">.</span>
-        </a>
+        </button>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
-              className="text-sm font-medium hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors uppercase tracking-widest"
+              onClick={() => scrollTo(link.target)}
+              className="text-sm font-medium hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors uppercase tracking-widest bg-transparent border-none cursor-pointer"
             >
               {link.name}
-            </a>
+            </button>
           ))}
           {mounted && (
             <button
@@ -87,14 +98,13 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden absolute top-20 left-0 right-0 bg-white dark:bg-black border-b border-gray-200 dark:border-zinc-800 p-6 flex flex-col space-y-6 shadow-xl">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-lg font-medium hover:text-yellow-500 dark:hover:text-yellow-400 uppercase tracking-widest"
+              onClick={() => { scrollTo(link.target); setIsOpen(false); }}
+              className="text-lg font-medium hover:text-yellow-500 dark:hover:text-yellow-400 uppercase tracking-widest bg-transparent border-none cursor-pointer text-left"
             >
               {link.name}
-            </a>
+            </button>
           ))}
         </div>
       )}

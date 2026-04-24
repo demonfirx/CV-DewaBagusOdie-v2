@@ -18,9 +18,9 @@ export function Footer() {
         </div>
         
         <div className="flex gap-8 text-sm font-bold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
-          <a href="#top" className="hover:text-yellow-400 transition-colors">
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-yellow-400 transition-colors bg-transparent border-none cursor-pointer text-sm font-bold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
             Back to top
-          </a>
+          </button>
         </div>
       </div>
     </footer>
