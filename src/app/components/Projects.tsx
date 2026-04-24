@@ -33,6 +33,8 @@ export function Projects() {
             {items.map((project, index) => (
               <motion.a
                 href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 key={project.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
