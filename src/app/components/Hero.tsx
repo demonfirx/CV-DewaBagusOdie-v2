@@ -42,7 +42,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-24 md:pb-28">
       {/* Background Tapes - ODIE branding ribbons */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-[0.04] dark:opacity-[0.06]">
+      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-20 dark:opacity-30">
         <AnimatedTape
           text="ODIE"
           rotate={-15}
