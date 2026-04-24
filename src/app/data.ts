@@ -78,7 +78,7 @@ export const portfolioData = {
         description: "Creative agency landing page with dark mode, glassmorphism, bold typography, scroll animations, and responsive design.",
         image: "https://images.unsplash.com/photo-1720962158883-b0f2021fb51e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9kZSUyMGRhc2hib2FyZCUyMHVpfGVufDF8fHx8MTc3NjMyMTMxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         tags: ["HTML", "CSS", "JavaScript"],
-        link: "https://nexus-landing-page-demonfirx.vercel.app",
+        link: "https://landing-page-ui-umber.vercel.app",
       },
       {
         id: 3,
@@ -86,7 +86,7 @@ export const portfolioData = {
         description: "Interactive component showcase — cards, buttons, data displays, animations, and mini dashboard with React + TypeScript + Tailwind.",
         image: "https://images.unsplash.com/photo-1581080247486-57989c1f14ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGFnZW5jeSUyMHdlYnNpdGUlMjB0eXBvZ3JhcGh5fGVufDF8fHx8MTc3NjMyMTMxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         tags: ["React", "TypeScript", "Tailwind"],
-        link: "https://ui-component-showcase-demonfirx.vercel.app",
+        link: "https://frontend-ui-showcase.vercel.app",
       },
       {
         id: 4,
