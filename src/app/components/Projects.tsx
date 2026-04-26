@@ -4,7 +4,7 @@ import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
 import { portfolioData } from "../data";
 import { SectionTitleAdaptive } from "./SectionTitle";
 
-const INITIAL_DISPLAY_COUNT = 5;
+const INITIAL_DISPLAY_COUNT = 4;
 
 export function Projects() {
   const { intro, items } = portfolioData.projects;
